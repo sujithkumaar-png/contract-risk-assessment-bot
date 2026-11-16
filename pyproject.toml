@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contract-risk-assessment-bot"
+version = "1.0.0"
+description = "Contract risk demo application with an automation testing portfolio."
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra --strict-markers"
+cache_dir = "reports/.pytest_cache"
+markers = [
+  "unit: unit tests for business logic",
+  "api: API integration tests",
+  "ui: browser-based end-to-end tests",
+  "streamlit: Streamlit AppTest interaction tests (no browser)",
+]
