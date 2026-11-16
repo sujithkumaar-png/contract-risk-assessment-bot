@@ -1,5 +1,13 @@
 ﻿# Contract Risk Assessment Bot
 
+The new full-stack **platform foundation** is additive to this verified Python
+application. See [Development setup](docs/DEVELOPMENT_SETUP.md) and
+[Architecture](docs/ARCHITECTURE.md) for Next.js + FastAPI commands and review.
+Legacy source, tests, dependency snapshots and the historical Phase 1 documents
+remain in place. Foundation verification: 52 Python tests passed, production build
+and TypeScript checks passed, and sequential backend/frontend HTTP checks passed.
+Browser tests, database integration and authentication remain deferred.
+
 A Python automation-testing portfolio project with a deterministic phrase detector,
 FastAPI API and Streamlit UI. Educational demo; not legal advice.
 

@@ -12,10 +12,11 @@ requires-python = ">=3.10"
 where = ["src"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
-pythonpath = ["src"]
-addopts = "-ra --strict-markers"
-cache_dir = "reports/.pytest_cache"
+testpaths = ["tests", "backend/tests"]
+pythonpath = ["src", "backend/src"]
+# The supplied cache directory is not writable; caching is optional for this suite.
+# Do not set cache_dir when cacheprovider is disabled.
+addopts = "-ra --strict-markers -p no:cacheprovider"
 markers = [
   "unit: unit tests for business logic",
   "api: API integration tests",
